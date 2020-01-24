@@ -1,0 +1,15 @@
+#<FilesMatch "\.(pdf|PDF)">
+#   ForceType application/pdf
+#   Header set Content-Disposition attachment
+# </FilesMatch>
+# AddType application/octet-stream .PDF
+
+<FilesMatch "\.(?i:pdf)$">
+  ForceType application/octet-stream
+  Header set Content-Disposition attachment
+</FilesMatch>
+
+<FilesMatch "\.(?i:PDF)$">
+  ForceType application/octet-stream
+  Header set Content-Disposition attachment
+</FilesMatch>
